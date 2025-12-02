@@ -5,9 +5,9 @@ pipeline {
         stage('Setup Python') {
             steps {
                 bat """
-                python --version
-                python -m pip install --upgrade pip
-                pip install -r requirements.txt
+                C:\\Users\\rohit\\AppData\\Local\\Programs\\Python\\Python314\\python.exe --version
+                C:\\Users\\rohit\\AppData\\Local\\Programs\\Python\\Python314\\python.exe -m pip install --upgrade pip
+                C:\\Users\\rohit\\AppData\\Local\\Programs\\Python\\Python314\\python.exe -m pip install -r requirements.txt
                 """
             }
         }
@@ -15,7 +15,7 @@ pipeline {
         stage('Run PyTest Tests') {
             steps {
                 bat """
-                pytest --html=report.html --self-contained-html
+                C:\\Users\\rohit\\AppData\\Local\\Programs\\Python\\Python314\\python.exe -m pytest --html=report.html --self-contained-html
                 """
             }
         }
